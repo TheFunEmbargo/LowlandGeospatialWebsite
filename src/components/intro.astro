@@ -1,0 +1,25 @@
+---
+import { Icon } from "astro-icon/components";
+import ContentSection from "~/components/content-section.astro";
+---
+
+<ContentSection title="Data, Seamlessly" id="intro">
+  <Icon slot="eyebrow" name="logomark" class="size-32" />
+  <Fragment slot="lead">
+    Lowland Geospatial <span class="text-primary">empowers teams</span> with
+    <span class="text-primary">always-on data</span>. From
+    <span class="text-primary">geospatial insights</span> to
+    <span class="text-primary">document workflows</span>, we make your data <span
+      class="text-primary">ready when you are</span
+    >.
+  </Fragment>
+  <div class="grid grid-cols-1 gap-2 sm:grid-cols-1">
+    <a
+      href="mailto:sam@lowlandgeospatial.com"
+      class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4 transition hover:bg-primary hover:text-white"
+    >
+      <Icon name="mdi:telescope" class="size-8" />
+      <span>Contact us</span>
+    </a>
+  </div>
+</ContentSection>

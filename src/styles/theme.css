@@ -1,0 +1,26 @@
+[data-theme="light"] {
+  --color-background: #F7F2E8;        /* Moon off-white base */
+  --color-background-offset: #f0e8de; /* Subtle card / surface offset */
+  
+  --color-text: #252121;              /* Dark charcoal for body text */
+  --color-text-offset: #3e6a61;       /* Deep teal for secondary labels / subtle text */
+  --color-title-text: #F7F2E8;        /* Always white for hero / headings on starry background */
+  
+  --color-primary: #f1af3d;           /* Golden amber accent */
+  --color-secondary: #e58e2e;         /* Warm orange secondary accent */
+  
+  --color-border: rgba(37, 33, 33, 0.1); /* Subtle border for cards */
+}
+
+[data-theme="dark"] {
+  --color-background: #252121;        /* Near-black / charcoal base */
+  --color-background-offset: #4a444433; /* Card / surface offset (slightly lighter) */
+  
+  --color-text: #F7F2E8;              /* Moon off-white text for contrast */
+  --color-text-offset: #75b0ac;       /* Muted teal for secondary labels / subtle text */
+  
+  --color-primary: #f1af3d;           /* Golden amber accent */
+  --color-secondary: #e58e2e;         /* Warm orange secondary accent */
+  
+  --color-border: rgba(247, 242, 232, 0.1); /* Subtle border on dark surfaces */
+}

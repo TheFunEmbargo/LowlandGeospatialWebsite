@@ -1,0 +1,31 @@
+---
+import { Icon } from "astro-icon/components";
+import HeroImage from "~/components/hero-image.astro";
+---
+
+<footer class="relative bg-black text-white">
+  <div class="absolute inset-0 overflow-hidden opacity-40">
+    <HeroImage />
+  </div>
+  <div class="relative px-8 py-8">
+    <!-- Company Information -->
+    <div class="flex flex-col gap-2 text-gray-400 text-sm">
+      <div class="flex items-center gap-2">
+        <Icon name="mdi:domain" class="size-4 text-gray-400" />
+        <span class="font-medium">Lowland Geospatial Ltd</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <Icon name="mdi:map-marker" class="size-4 text-gray-400" />
+        <span>10 Barn Close, Poole, BH16 5RX</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <Icon name="mdi:card-account-details" class="size-4 text-gray-400" />
+        <span>CRN 1234567</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <Icon name="mdi:flag" class="size-4 text-gray-400" />
+        <span>Registered in England and Wales</span>
+      </div>
+    </div>
+  </div>
+</footer>

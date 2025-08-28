@@ -1,0 +1,89 @@
+---
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+import astronautImage from "~/assets/astronaut.png";
+import pannelmanImage from "~/assets/pannelman.png";
+import HeroImage from "~/components/hero-image.astro";
+import Starfield from "~/components/starfield.astro";
+
+const widths = [450, 800];
+const sizes = "(min-width: 640px) 42vw, 67vw";
+---
+
+<section class="relative h-full overflow-hidden bg-black">
+  <Starfield />
+
+  <!-- Background fallback -->
+  <div id="splash-bg-fallback" class="absolute inset-0 hidden opacity-40">
+    <HeroImage />
+  </div>
+
+  <!-- Pannelman image at bottom left, much bigger on mobile, positioned further left -->
+  <div class="absolute -left-1/2 bottom-0 z-0 w-[150%] sm:left-0 sm:w-3/4">
+    <Image
+      class="h-auto w-full object-cover"
+      src={pannelmanImage}
+      widths={[1200, 2000, 2500]}
+      sizes="(min-width: 640px) 75vw, 150vw"
+      loading="lazy"
+      alt="Pannelman at the bottom left"
+    />
+  </div>
+
+  <!-- Main grid content -->
+  <div
+    class="relative grid h-full place-items-center pt-[8vh] sm:grid-cols-2 sm:place-items-start sm:pt-[12vh]"
+  >
+    <div class="hidden sm:block"></div>
+    <div
+      id="astronaut"
+      class="flex w-full max-w-3xl flex-col items-center sm:w-10/12 sm:justify-self-start"
+    >
+      <Icon name="logomark" class="size-20 text-white md:size-32" />
+      <div
+        class="fg-color-title-text text-center font-extrabold tracking-tighter text-6xl md:text-8xl"
+      >
+        Deliver
+        <br /> projects
+        <br /> faster.
+      </div>
+    </div>
+  </div>
+</section>
+
+<noscript>
+  <style>
+    #splash-bg-fallback {
+      display: block;
+    }
+  </style>
+</noscript>
+
+<style>
+  @keyframes float {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(0, 30px, 0);
+    }
+  }
+
+  #astronaut {
+    animation: float linear 2.5s infinite alternate;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #astronaut {
+      @apply animate-none;
+    }
+
+    :global(#starfield) {
+      @apply hidden;
+    }
+
+    #splash-bg-fallback {
+      @apply block;
+    }
+  }
+</style>
