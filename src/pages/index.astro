@@ -9,8 +9,8 @@ import "~/styles/index.css";
 
 const { generator, site } = Astro;
 // TODO generate a social image.
-const image = new URL("social.jpg", site);
-const description = "Lowland Geosp";
+const image = new URL("social.png", site);
+const description = "Lowland Geospatial";
 ---
 
 <!doctype html>
@@ -25,7 +25,7 @@ const description = "Lowland Geosp";
     <meta name="description" content={description} />
 
     <!-- social media -->
-    <meta property="og:title" content="Astro" />
+    <meta property="og:title" content="Lowland Geospatial" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={image} />
